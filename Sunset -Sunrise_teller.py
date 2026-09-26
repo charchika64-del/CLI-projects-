@@ -65,7 +65,7 @@ while True:
     lon = locations[city]["lon"]
 
     if number == 1:
-        # Pass `city` into the function
+
         get_data(city, lat, lon)
 
     elif number == 2:
@@ -73,7 +73,6 @@ while True:
         month = input("Enter month (e.g. 09): ")
         day = input("Enter day 📅 (e.g. 09): ")
         date_str = f"{year}-{month}-{day}"
-        # Pass `city` into the function
         get_data(city, lat, lon, date_str)
 
     else:
