@@ -55,7 +55,7 @@ while True:
         print("Exiting...")
         break
 
-    city = input("Enter your city: ")
+    city = input("Enter your city: ").capitalize()
     
     if city not in locations:
         print(f"❌ City '{city}' not found in our database.")
