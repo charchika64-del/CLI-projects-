@@ -20,7 +20,6 @@ locations = {
     "Singapore": {"lat": 1.3521, "lon": 103.8198}
 }
 
-# NEW: Added `city_name` as the first parameter
 def get_data(city_name, lat, lon, date=None):
     url = f"https://api.sunrise-sunset.org/v2?lat={lat}&lng={lon}"
     if date:
@@ -31,7 +30,6 @@ def get_data(city_name, lat, lon, date=None):
     sunrise = datetime.fromisoformat(data["sunrise"]).strftime('%I:%M %p')
     sunset = datetime.fromisoformat(data["sunset"]).strftime('%I:%M %p')
 
-    # Use city_name instead of the global variable
     print(f" City: {city_name}🏭 ")
     print(f" Date: {data['date']}🗓️ ")
     print(f"  Timezone: {data['tzid']}⏰")
