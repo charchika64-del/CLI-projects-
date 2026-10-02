@@ -11,9 +11,14 @@ def count_lines(file):
     return count
     
 def count_words_chars(file):
+      punctuations=['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
       with open(file,"r") as f:
         content=f.read()
-      fresh_content=content.replace(","," ")
+      fresh_content=content  
+      for punc_mark in punctuations:
+          #Replacing each punctuation mark with " ".
+          #So that the punctuation marks will not be counted as words
+          fresh_content=fresh_content.replace(punc_mark," ")
       words=fresh_content.split()
       #removes white spaces
       chars=len(content)
