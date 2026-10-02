@@ -17,7 +17,7 @@ def count_words_chars(file):
       words=fresh_content.split()
       #removes white spaces
       chars=len(content)
-      #this count spaces and everything
+      #this counts spaces and everything
       return len(words),chars
                 
 while True:
