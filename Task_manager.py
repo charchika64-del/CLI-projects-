@@ -35,10 +35,10 @@ while True:
             tasks.write(f"{task}\n")
             
     elif choice == 2:
-               if len(work) == 0:
-                   print("There are no tasks")
-               else:
-                   show_tasks()
+        if len(work) == 0:
+            print("There are no tasks")
+        else:
+            show_tasks()
                             
     elif choice == 3:
         show_tasks()
