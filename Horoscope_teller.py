@@ -12,14 +12,15 @@ print("Type 3 to exit.")
 while True:
     try:
         choice = int(input("Enter a number: "))
-        sign = input("Enter your sign: ")
         
         if choice == 1:
+            sign = input("Enter your sign: ")
             params = {"sign": sign,"date": "today","tz_str": "Asia/Kolkata"}
             response = requests.get(url, params=params, headers=headers,timeout=10)
             response.raise_for_status()
             
         elif choice == 2:
+            sign = input("Enter your sign: ")
             print("Enter month in short or long form.")
             year = int(input("Enter year: "))
             month = input("Enter month: ")
