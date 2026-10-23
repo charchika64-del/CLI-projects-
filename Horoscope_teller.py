@@ -23,24 +23,27 @@ while True:
             print("Enter month in short or long form.")
             year = int(input("Enter year: "))
             month = input("Enter month: ")
-            day = int(input("Enter day: "))
             
             if month.isnumeric():
                 print("No numbers are allowed for months.")
                 print("Please type a short or a long month name.")
                 continue
+                
             if len(month)>3:
                  month = month[0:3]
-            if len(str(day))>1:
-                day="0"+str(day)
-                
+                 
             try:
-                month_num = datetime.strptime(month,"%b")
+                 month_num = datetime.strptime(month, "%b")
+                 month_formatted = month_num.strftime("%m")  
             except ValueError:
-                print("That's invalid month.")
-                continue
-                
-            date = f"{year}-{month}-{day}"
+                 print("That's invalid month.")
+                 continue
+                 
+            day = int(input("Enter day: "))
+            if len(str(day))==1:
+               day="0"+str(day)
+               
+            date = f"{year}-{month_formatted}-{day}"  
             params = {"sign": sign,"date": date,"tz_str": "Asia/Kolkata"}
             response = requests.get(url, params=params, headers=headers,timeout=10)
             response.raise_for_status()
@@ -74,7 +77,7 @@ while True:
     print("Here is your horoscope🔮--")
     print("Lucky colour 🎨 ",colour)
     print("Lucky number 0️⃣ ",data["data"]["lucky"]["number"])
-    print(f"Theme if the day🏷️- {data['data'] ['content'] ['theme']}")
+    print(f"Theme 🏷️- {data['data'] ['content'] ['theme']}")
     
     print("\nYour day 🌞---")
     print(data["data"]["content"]["text"])
