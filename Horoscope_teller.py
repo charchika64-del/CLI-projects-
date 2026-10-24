@@ -1,5 +1,5 @@
 import requests
-from config.py import astro_key
+from config import astro_key
 from datetime import datetime
 url = "https://api.freeastroapi.com/api/v2/horoscope/daily/sign"
 headers = {"x-api-key": astro_key }
