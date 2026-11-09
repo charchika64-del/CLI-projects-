@@ -29,18 +29,17 @@ while True:
         
     if choice == 1:
        name = input('Enter name: ').lower()
+       #check if contact exists
+       if name in contacts.keys():
+         print('The name already exists.')
+         continue
+         
        phone = input('Enter number: ')
-       
        #check if there is a letter 
        if not phone.isnumeric():
           print('Type a valid phone number')
           continue
-          
-      #check if contact exists
-       if name in contacts.keys():
-         print('The name already exists.')
-         continue
-                    
+                              
        contacts[name] = phone
        with open('contacts_manager.txt','a') as manager:
            manager.write(f"{name},{phone}\n")
