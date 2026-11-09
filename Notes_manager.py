@@ -65,7 +65,6 @@ while True:
             print("[File deleted]")
          else:
             print("That file does not exist")
-            continue
             
     elif choice == 5:
             print("[Finished]") 
@@ -73,5 +72,5 @@ while True:
             
     else:
             print("Type a valid number")     
-            continue    
+           
                               
