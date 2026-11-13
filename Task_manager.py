@@ -68,5 +68,5 @@ while True:
 
     else:    
        print("Type 1,2,3 or 4")
-       continue
+       
     
