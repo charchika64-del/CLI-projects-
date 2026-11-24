@@ -103,4 +103,4 @@ while True:
     except requests.exceptions.HTTPError as e:
             print("HTTP Error",e)
     except requests.exceptions.ConnectionError:
-            print("Please chaeck your network")
+            print("Please check your network")
