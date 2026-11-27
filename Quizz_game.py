@@ -62,7 +62,7 @@ while True:
      except requests.exceptions.HTTPError as e:
          print("Error occured:",e)
      except ValueError:
-         print("Type an id number.")
+         print("Type a number.")
      except requests.exceptions.Timeout:
          print("Request timed out!!!")
      except requests.exceptions.ConnectionError:
