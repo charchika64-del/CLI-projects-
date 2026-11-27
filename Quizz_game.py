@@ -1,10 +1,12 @@
 import requests
 import random
-
+print("===Quiz game===")
 url = "https://opentdb.com/api.php"
+print("Categories")
 print("""9 for general, 10 for books, 11 for film, 12 for music, 15 for games,
-      17 for science, 18 for computers, 19 for math, 21 for sports, 22 for geography,
-       23 for history, 24 for politics, 27 for animals, 31 for anime""")
+17 for science, 18 for computers, 19 for math, 21 for sports, 22 for geography,
+23 for history, 24 for politics, 27 for animals, 31 for anime""")
+
 def start_quizz(data):
     results = data["results"]
     score = 0
